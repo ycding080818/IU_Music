@@ -17,6 +17,14 @@ html, body{
    font-family:Lato-Regular;
 	 src: url(../fonts/Lato-Regular.ttf) format('truetype');
 }
+@font-face{
+	font-family:Chinese-SentyTEApro;
+	 src: url(../Chinese_Font1/错误的爱情.ttf) format('truetype');
+}
+@font-face{
+   font-family:Chinese-SharpSimple;
+	 src: url(../fonts/锐字锐线极限黑简.TTF) format('truetype');
+}
 p{
 	margin:0;
 }
@@ -85,9 +93,10 @@ a.navbar-brand:before{
 }
 .navbar-nav li a {
   color: #fff !important;
-  font-size: 1.4em;
+  font-size: 1.7em;
   padding: 0;
-  font-family:FredokaOne-Regular;
+  font-family:Chinese-SharpSimple;
+  font-weight: 900;
 }
 .navbar-nav li a:hover,.navbar-nav li a.active{
    color:#000 !important;
