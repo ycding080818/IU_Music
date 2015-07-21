@@ -25,9 +25,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
+            $(".scroll").click(function (event) {
                 event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+            $('#drop-down').mouseenter(function () {
+                setTimeout(function () {
+                   $('.drop-down-ul').find('a').slideDown();
+                }, 200);
+            }).mouseleave(function () {
+                clearTimeout(200);
+                $('.drop-down-ul').find('a').slideUp();
             });
         });
     </script>
@@ -54,8 +62,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"  class="active">首页</a></li>
                     <li><a href="#about" class="scroll">关于我们</a></li>
-                    <li><a href="#news" class="scroll">新闻&事件</a></li>
-                    <li><a href="#gallery" class="scroll">相册</a></li>
+                    <li id="drop-down"><a href="#news" class="scroll">EVO进行时</a>
+                        <ul class="drop-down-ul" style="position: absolute;">
+                            <li><a href="#"  class="sec-level">最新事件</a></li>
+                            <li><a href="#"  class="sec-level">参赛选手</a></li>
+                            <li><a href="#"  class="sec-level">相册</a></li>
+                            <li><a href="#"  class="sec-level">粉丝互动</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#gallery" class="scroll">我要报名</a></li>
                     <li><a href="#contact" class="scroll">联系我们</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -113,28 +128,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- about -->
 <div id="about" class="about">
     <div class="container">
-        <h3>About Us</h3>
-        <p class="eos">Sed ut perspiciatis unde omnis iste natus error
-            sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam.</p>
+        <h3>关于我们</h3>
+        <p class="eos">IU Entertainment 于2014年成立，总部位于LA。IU是一家致力于在美国发展话语音乐娱乐产业多元文化传播公司。</p>
         <div class="about-grids">
             <div class="col-md-6 about-grid-left">
                 <img src="images/2.jpg" alt=" " class="img-responsive" />
             </div>
             <div class="col-md-6 about-grid-right">
-                <h4>Perferendis autem quibusdam et aut officiis
-                    debitis aut rerum perferendis doloribus </h4>
-                <p>Itaque earum rerum hic tenetur a sapiente delectus,
-                    ut aut reiciendis voluptatibus maiores alias consequatur
-                    aut perferendis doloribus asperiores repellat voluptatibus
-                    maiores alias.Sed ut perspiciatis unde omnis iste natus error
-                    sit voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam.At vero eos et accusamus et iusto odio dignissimos
-                    ducimus qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint occaecati
-                    cupiditate non provident.</p>
+                <h4>            我们旨在将华语地区的精彩演艺项目及综艺项目引进美国市场，同时提供最专业的演唱会制作、活动策划、广告宣传等服务。
+
+                </h4>
+                <p>为身在异国他乡的留学生及华侨同胞们带来亚洲最具才华的艺人和最高品质的文化和娱乐享受，并让美国真正认识到华语音乐的力量与魅力。</p>
                 <div class="click more quas">
-                    <a href="single.html" class="hvr-shutter-in-vertical repellat">Read more...</a>
+                    <a href="single.html" class="hvr-shutter-in-vertical repellat">IU，不错哦...</a>
                 </div>
             </div>
             <div class="clearfix"> </div>
